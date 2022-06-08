@@ -6,13 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@types/color": "^3.0.3",
     "axios": "^0.27.2",
+    "color": "^4.2.3",
     "framer-motion": "^6",
     "lodash": "^4.17.21",
     "next": "12.1.6",
