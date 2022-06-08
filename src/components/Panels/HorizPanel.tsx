@@ -1,10 +1,12 @@
-import { Flex } from "@chakra-ui/layout";
+import { SimpleGrid } from "@chakra-ui/layout";
 import React, { PropsWithChildren } from "react";
 
-export default function HorizPanel({ children }: PropsWithChildren<unknown>) {
+interface Props extends PropsWithChildren<unknown> {}
+
+export default function HorizPanel({ children }: Props) {
   return (
-    <Flex gap={2} overflowX="auto" alignItems="flex-start">
+    <SimpleGrid columns={[1, 1, 2, 3]} spacing={4}>
       {children}
-    </Flex>
+    </SimpleGrid>
   );
 }
