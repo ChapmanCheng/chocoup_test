@@ -1,20 +1,12 @@
 import React, { useMemo } from "react";
+import type Computer from "../../type/Computer";
 import AbstractCard, { Detail } from "./AbstractCard";
 
-export type ComputerDetail = {
-  id: number;
-  uid: string;
-  platform: string;
-  type: string;
-  os: string;
-  stack: string;
-};
-
 interface Props {
-  data: ComputerDetail;
+  data: Computer;
 }
 
-const Computer = ({ data }: Props) => {
+const ComputerCard = ({ data }: Props) => {
   const details = useMemo<Detail>(() => {
     const { id, uid, ...rest } = data;
     return { ...rest };
@@ -24,4 +16,4 @@ const Computer = ({ data }: Props) => {
   );
 };
 
-export default Computer;
+export default ComputerCard;

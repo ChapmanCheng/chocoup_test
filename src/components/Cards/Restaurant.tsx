@@ -1,41 +1,12 @@
 import React, { useMemo } from "react";
+import type Restaurant from "../../type/Restaurant";
 import AbstractCard, { Detail } from "./AbstractCard";
 
-type OpeningHourDay = {
-  opens_at: string;
-  closes_at: string;
-  is_closed: boolean;
-};
-
-type OpeningHours = Record<
-  | "monday"
-  | "tuesday"
-  | "wednesday"
-  | "thursday"
-  | "friday"
-  | "saturday"
-  | "sunday",
-  OpeningHourDay
->;
-
-export type RestaurantDetail = {
-  id: number;
-  uid: string;
-  name: string;
-  type: string;
-  description: string;
-  review: string;
-  logo: string;
-  phone_number: string;
-  address: string;
-  hours: OpeningHours;
-};
-
 interface Props {
-  data: RestaurantDetail;
+  data: Restaurant;
 }
 
-const Restaurant = ({ data }: Props) => {
+const RestaurantCard = ({ data }: Props) => {
   const details = useMemo<Detail>(() => {
     const { hours, id, uid, logo, name, ...rest } = data;
     return { ...rest };
@@ -45,4 +16,4 @@ const Restaurant = ({ data }: Props) => {
   );
 };
 
-export default Restaurant;
+export default RestaurantCard;

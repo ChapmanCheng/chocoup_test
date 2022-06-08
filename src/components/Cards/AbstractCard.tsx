@@ -15,7 +15,7 @@ const TEXT_COLOR: ColorProps["color"] = "gray.600";
 
 export default function AbstractCard({ category, header, details }: Props) {
   return (
-    <Box backgroundColor="white" p={4} maxW="400">
+    <Box backgroundColor="white" p={4} minWidth="400">
       <Flex justifyContent="space-between">
         <Heading>{header}</Heading>
         <Link href="#" style={{ cursor: "pointer" }}>
@@ -27,7 +27,6 @@ export default function AbstractCard({ category, header, details }: Props) {
       <Box pt={2} pb={4}>
         <Text color={TEXT_COLOR}>{category}</Text>
       </Box>
-
       <Box color={TEXT_COLOR}>
         {Object.entries(details).map(([key, value], i) => (
           <Flex justifyContent="space-between" pb={2} key={i}>

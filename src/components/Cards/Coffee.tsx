@@ -1,21 +1,12 @@
 import React, { useMemo } from "react";
+import Coffee from "../../type/Coffee";
 import AbstractCard, { Detail } from "./AbstractCard";
 
-export type CoffeeDetail = {
-  id: number;
-  uid: string;
-  blend_name: string;
-  origin: string;
-  variety: string;
-  notes: string;
-  intensifier: string;
-};
-
 interface Props {
-  data: CoffeeDetail;
+  data: Coffee;
 }
 
-const Coffee = ({ data }: Props) => {
+const CoffeeCard = ({ data }: Props) => {
   const details = useMemo<Detail>(() => {
     const { blend_name, id, uid, ...rest } = data;
     return { ...rest };
@@ -29,4 +20,4 @@ const Coffee = ({ data }: Props) => {
   );
 };
 
-export default Coffee;
+export default CoffeeCard;
