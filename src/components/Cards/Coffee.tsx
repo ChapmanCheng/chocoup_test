@@ -1,16 +1,21 @@
-import React, { useMemo } from "react";
+import React from "react";
+import useExtractByKeys from "../../hooks/useExtractByKeys";
 import Coffee from "../../type/Coffee";
-import AbstractCard, { Detail } from "./AbstractCard";
+import AbstractCard from "./AbstractCard";
 
 interface Props {
   data: Coffee;
 }
 
 const CoffeeCard = ({ data }: Props) => {
-  const details = useMemo<Detail>(() => {
-    const { blend_name, id, uid, ...rest } = data;
-    return { ...rest };
-  }, [data]);
+  const details = useExtractByKeys(
+    data,
+    "intensifier",
+    "notes",
+    "origin",
+    "variety"
+  );
+
   return (
     <AbstractCard
       header={data.blend_name}

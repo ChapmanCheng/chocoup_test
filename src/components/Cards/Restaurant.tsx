@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import useExtractByKeys from "../../hooks/useExtractByKeys";
 import type Restaurant from "../../type/Restaurant";
 import AbstractCard, { Detail } from "./AbstractCard";
 
@@ -7,10 +8,15 @@ interface Props {
 }
 
 const RestaurantCard = ({ data }: Props) => {
-  const details = useMemo<Detail>(() => {
-    const { hours, id, uid, logo, name, ...rest } = data;
-    return { ...rest };
-  }, [data]);
+  const details = useExtractByKeys(
+    data,
+    "type",
+    "description",
+    "review",
+    "phone_number",
+    "address"
+  );
+
   return (
     <AbstractCard header={data.name} category="Restaurant" details={details} />
   );

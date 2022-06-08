@@ -1,10 +1,10 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
-import { ColorProps, Link as ViewLink, Spacer } from "@chakra-ui/react";
-import { truncate } from "lodash";
+import { Link as ViewLink, Spacer } from "@chakra-ui/react";
+import { startCase, truncate } from "lodash";
 import Link from "next/link";
 import React from "react";
 
-export type Detail = Record<any, string | number>;
+export type Detail = Record<string, any>;
 
 interface Props {
   header: string;
@@ -30,7 +30,7 @@ export default function AbstractCard({ category, header, details }: Props) {
       <Box>
         {Object.entries(details).map(([key, value], i) => (
           <Flex justifyContent="space-between" pb={2} key={i}>
-            <Text>{key}</Text>
+            <Text>{startCase(key)}</Text>
             <Spacer />
             <Text>
               {typeof value == "string"

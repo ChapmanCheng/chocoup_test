@@ -1,16 +1,15 @@
-import React, { useMemo } from "react";
+import React from "react";
+import useExtractByKeys from "../../hooks/useExtractByKeys";
 import type Computer from "../../type/Computer";
-import AbstractCard, { Detail } from "./AbstractCard";
+import AbstractCard from "./AbstractCard";
 
 interface Props {
   data: Computer;
 }
 
 const ComputerCard = ({ data }: Props) => {
-  const details = useMemo<Detail>(() => {
-    const { id, uid, ...rest } = data;
-    return { ...rest };
-  }, [data]);
+  const details = useExtractByKeys(data, "platform", "os", "stack", "type");
+
   return (
     <AbstractCard header={data.os} category={"Computer"} details={details} />
   );
