@@ -11,7 +11,13 @@ const Home: NextPage = () => {
   return (
     <Box backgroundColor="gray.100" p={4} rounded="md">
       <Tabs variant="solid-rounded" colorScheme="purple">
-        <TabList pb={4} borderBottom="2px" borderColor="gray.400">
+        <TabList
+          pb={4}
+          borderBottom="2px"
+          borderColor="gray.400"
+          gap={2}
+          flexWrap={["wrap", "nowrap"]}
+        >
           <Tab {...tabProps}>Overview</Tab>
           <Tab {...tabProps}>Coffee</Tab>
           <Tab {...tabProps}>Computer</Tab>
