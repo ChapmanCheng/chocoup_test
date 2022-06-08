@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from "react";
 
 interface Props extends PropsWithChildren<unknown> {}
 
-export default function HorizPanel({ children }: Props) {
+export default function GridPanelLayout({ children }: Props) {
   return (
     <SimpleGrid columns={[1, 1, 2, 3]} spacing={4}>
       {children}

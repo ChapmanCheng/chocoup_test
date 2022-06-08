@@ -3,7 +3,7 @@ import axiosInstance from "../../resources/randomDataApiResources";
 import type Coffee from "../../types/Coffee";
 import extractAxiosData from "../../utilities/extracAxiosData";
 import CoffeeCard from "../Cards/Coffee";
-import HorizPanel from "./HorizPanel";
+import GridPanelLayout from "./HorizPanel";
 
 export default function CoffeePanel() {
   const [coffees, setCoffees] = useState<Coffee[]>([]);
@@ -15,10 +15,10 @@ export default function CoffeePanel() {
       .catch(console.error);
   }, []);
   return (
-    <HorizPanel>
+    <GridPanelLayout>
       {coffees.map((coffee) => (
         <CoffeeCard data={coffee} key={coffee.uid} />
       ))}
-    </HorizPanel>
+    </GridPanelLayout>
   );
 }

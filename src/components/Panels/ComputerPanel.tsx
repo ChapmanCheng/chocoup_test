@@ -3,7 +3,7 @@ import axiosInstance from "../../resources/randomDataApiResources";
 import extractAxiosData from "../../utilities/extracAxiosData";
 import ComputerCard from "../Cards/Computer";
 import type ComputerType from "../../types/Computer";
-import HorizPanel from "./HorizPanel";
+import GridPanelLayout from "./HorizPanel";
 
 export default function ComputerPanel() {
   const [computers, setComputers] = useState<ComputerType[]>([]);
@@ -16,10 +16,10 @@ export default function ComputerPanel() {
   }, []);
 
   return (
-    <HorizPanel>
+    <GridPanelLayout>
       {computers.map((computer) => (
         <ComputerCard data={computer} key={computer.uid} />
       ))}
-    </HorizPanel>
+    </GridPanelLayout>
   );
 }

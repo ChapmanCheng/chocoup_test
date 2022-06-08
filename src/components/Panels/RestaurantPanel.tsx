@@ -3,7 +3,7 @@ import axiosInstance from "../../resources/randomDataApiResources";
 import type Restaurant from "../../types/Restaurant";
 import extractAxiosData from "../../utilities/extracAxiosData";
 import RestaurantCard from "../Cards/Restaurant";
-import HorizPanel from "./HorizPanel";
+import GridPanelLayout from "./HorizPanel";
 
 export default function RestaurantPanel() {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
@@ -16,10 +16,10 @@ export default function RestaurantPanel() {
   }, []);
 
   return (
-    <HorizPanel>
+    <GridPanelLayout>
       {restaurants.map((restaurant) => (
         <RestaurantCard data={restaurant} key={restaurant.uid} />
       ))}
-    </HorizPanel>
+    </GridPanelLayout>
   );
 }

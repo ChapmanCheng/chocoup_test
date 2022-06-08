@@ -7,7 +7,7 @@ import extractAxiosData from "../../utilities/extracAxiosData";
 import CoffeeCard from "../Cards/Coffee";
 import ComputerCard from "../Cards/Computer";
 import RestaurantCard from "../Cards/Restaurant";
-import HorizPanel from "./HorizPanel";
+import GridPanelLayout from "./HorizPanel";
 
 const params = { size: 7 };
 export default function OverviewPanel() {
@@ -33,7 +33,7 @@ export default function OverviewPanel() {
   }, []);
 
   return (
-    <HorizPanel>
+    <GridPanelLayout>
       {coffees.map((coffee) => (
         <CoffeeCard data={coffee} key={coffee.uid} />
       ))}
@@ -43,6 +43,6 @@ export default function OverviewPanel() {
       {restaurants.map((restaurant) => (
         <RestaurantCard data={restaurant} key={restaurant.uid} />
       ))}
-    </HorizPanel>
+    </GridPanelLayout>
   );
 }
