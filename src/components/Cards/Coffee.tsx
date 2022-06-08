@@ -1,6 +1,6 @@
 import React from "react";
 import useExtractByKeys from "../../hooks/useExtractByKeys";
-import Coffee from "../../type/Coffee";
+import Coffee from "../../types/Coffee";
 import AbstractCard from "./AbstractCard";
 
 interface Props {

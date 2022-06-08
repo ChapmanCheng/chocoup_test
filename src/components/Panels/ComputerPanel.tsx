@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axiosInstance from "../../axios";
+import axiosInstance from "../../resources/randomDataApiResources";
 import extractAxiosData from "../../utilities/extracAxiosData";
 import ComputerCard from "../Cards/Computer";
-import type ComputerType from "../../type/Computer";
+import type ComputerType from "../../types/Computer";
 import HorizPanel from "./HorizPanel";
 
 export default function ComputerPanel() {

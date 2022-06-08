@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axiosInstance from "../../axios";
-import type Coffee from "../../type/Coffee";
-import type Computer from "../../type/Computer";
-import Restaurant from "../../type/Restaurant";
+import axiosInstance from "../../resources/randomDataApiResources";
+import type Coffee from "../../types/Coffee";
+import type Computer from "../../types/Computer";
+import Restaurant from "../../types/Restaurant";
 import extractAxiosData from "../../utilities/extracAxiosData";
 import CoffeeCard from "../Cards/Coffee";
 import ComputerCard from "../Cards/Computer";

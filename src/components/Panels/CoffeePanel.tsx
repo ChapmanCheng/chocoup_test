@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axiosInstance from "../../axios";
-import type Coffee from "../../type/Coffee";
+import axiosInstance from "../../resources/randomDataApiResources";
+import type Coffee from "../../types/Coffee";
 import extractAxiosData from "../../utilities/extracAxiosData";
 import CoffeeCard from "../Cards/Coffee";
 import HorizPanel from "./HorizPanel";

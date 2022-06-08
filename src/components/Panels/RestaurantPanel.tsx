@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axiosInstance from "../../axios";
-import type Restaurant from "../../type/Restaurant";
+import axiosInstance from "../../resources/randomDataApiResources";
+import type Restaurant from "../../types/Restaurant";
 import extractAxiosData from "../../utilities/extracAxiosData";
 import RestaurantCard from "../Cards/Restaurant";
 import HorizPanel from "./HorizPanel";

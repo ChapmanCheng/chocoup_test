@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import useExtractByKeys from "../../hooks/useExtractByKeys";
-import type Restaurant from "../../type/Restaurant";
+import type Restaurant from "../../types/Restaurant";
 import AbstractCard, { Detail } from "./AbstractCard";
 
 interface Props {
