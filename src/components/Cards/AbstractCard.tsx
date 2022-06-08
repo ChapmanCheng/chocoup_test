@@ -19,7 +19,7 @@ export default function AbstractCard({ category, header, details }: Props) {
         <Heading size={["md", "lg", "xl"]}>{header}</Heading>
         <Spacer />
         <Link href="#" style={{ cursor: "pointer" }}>
-          <ViewLink fontWeight="bold" color="orange.600">
+          <ViewLink fontSize="xl" fontWeight="bold" color="orange.600">
             View
           </ViewLink>
         </Link>
