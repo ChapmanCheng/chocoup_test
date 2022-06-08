@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import React from "react";
 import CoffeePanel from "../components/Panels/CoffeePanel";
 import ComputerPanel from "../components/Panels/ComputerPanel";
+import OverviewPanel from "../components/Panels/OverviewPanel";
 import RestaurantPanel from "../components/Panels/RestaurantPanel";
 
 const Home: NextPage = () => {
@@ -17,7 +18,7 @@ const Home: NextPage = () => {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <p>Overview</p>
+            <OverviewPanel />
           </TabPanel>
           <TabPanel>
             <CoffeePanel />
