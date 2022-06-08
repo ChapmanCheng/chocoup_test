@@ -9,6 +9,9 @@ import Layout from "../components/layout";
 
 const theme = extendTheme({
   colors: { link: Color.rgb(299, 104, 36).hex() },
+  styles: {
+    global: { body: { fontSize: "12px", color: "gray.600" } },
+  },
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

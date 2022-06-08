@@ -12,8 +12,6 @@ interface Props {
   details: Detail;
 }
 
-const TEXT_COLOR: ColorProps["color"] = "gray.600";
-
 export default function AbstractCard({ category, header, details }: Props) {
   return (
     <Box backgroundColor="white" p={4} minWidth="400">
@@ -27,9 +25,9 @@ export default function AbstractCard({ category, header, details }: Props) {
         </Link>
       </Flex>
       <Box pt={2} pb={4}>
-        <Text color={TEXT_COLOR}>{category}</Text>
+        <Text>{category}</Text>
       </Box>
-      <Box color={TEXT_COLOR}>
+      <Box>
         {Object.entries(details).map(([key, value], i) => (
           <Flex justifyContent="space-between" pb={2} key={i}>
             <Text>{key}</Text>
