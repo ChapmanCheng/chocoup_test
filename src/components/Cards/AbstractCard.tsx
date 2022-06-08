@@ -14,9 +14,9 @@ interface Props {
 
 export default function AbstractCard({ category, header, details }: Props) {
   return (
-    <Box backgroundColor="white" p={4} minWidth="400">
+    <Box backgroundColor="white" p={4} minWidth={["100%", 300, 400]}>
       <Flex justifyContent="space-between">
-        <Heading>{header}</Heading>
+        <Heading size={["md", "lg", "xl"]}>{header}</Heading>
         <Spacer />
         <Link href="#" style={{ cursor: "pointer" }}>
           <ViewLink fontWeight="bold" color="link">
