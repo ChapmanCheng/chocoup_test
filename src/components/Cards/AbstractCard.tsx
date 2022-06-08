@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout";
-import { ColorProps, Link as ViewLink, Spacer } from "@chakra-ui/react";
+import { Link as ViewLink, Spacer } from "@chakra-ui/react";
 import { truncate } from "lodash";
 import Link from "next/link";
 import React from "react";
@@ -21,7 +21,7 @@ export default function AbstractCard({ category, header, details }: Props) {
         <Heading>{header}</Heading>
         <Spacer />
         <Link href="#" style={{ cursor: "pointer" }}>
-          <ViewLink fontWeight="bold" color="orange.600">
+          <ViewLink fontWeight="bold" color="link">
             View
           </ViewLink>
         </Link>
